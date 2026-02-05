@@ -2,18 +2,10 @@
 
 A comprehensive list of all free email domain providers. Based on [Kiko Beats' free-email-domains](https://github.com/Kikobeats/free-email-domains) and [HubSpot blocked domains](https://knowledge.hubspot.com/forms/what-domains-are-blocked-when-using-the-blocked-email-domains-feature).
 
-## Install
-
-```bash
-$ npm install @srworksllc/free-email-domains --save
-```
-
 ## Usage
 
-```js
-const freeEmailDomains = require('@srworksllc/free-email-domains')
-
-freeEmailDomains.includes('gmail.com') // => true
+```
+https://raw.githubusercontent.com/srworksllc/free-email-domains/main/domains.json
 ```
 
 ## Related
