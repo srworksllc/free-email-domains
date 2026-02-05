@@ -1,56 +1,30 @@
-# Free Email Domains
+# free-email-domains
 
-A maintained JSON list of free email provider domains. Originally based on [free-email-domains](https://github.com/Kikobeats/free-email-domains) by [Kiko Beats](https://kikobeats.com), which was based on [HubSpot blocked domains](https://knowledge.hubspot.com/forms/what-domains-are-blocked-when-using-the-blocked-email-domains-feature).
+A comprehensive list of all free email domain providers. Based on [Kiko Beats' free-email-domains](https://github.com/Kikobeats/free-email-domains) and [HubSpot blocked domains](https://knowledge.hubspot.com/forms/what-domains-are-blocked-when-using-the-blocked-email-domains-feature).
 
-Useful for detecting signups with free/personal email addresses vs. business/corporate domains.
+## Install
+
+```bash
+$ npm install @srworksllc/free-email-domains --save
+```
 
 ## Usage
 
-### Direct URL
-
-```
-https://raw.githubusercontent.com/srworksllc/free-email-domains/main/domains.json
-```
-
-### JavaScript / Node.js
-
 ```js
-const domains = require('./domains.json');
+const freeEmailDomains = require('@srworksllc/free-email-domains')
 
-function isFreeEmail(email) {
-  const domain = email.split('@').pop().toLowerCase();
-  return domains.includes(domain);
-}
+freeEmailDomains.includes('gmail.com') // => true
 ```
-
-### PHP
-
-```php
-$domains = json_decode(file_get_contents('domains.json'), true);
-
-function isFreeEmail(string $email): bool {
-    $domain = strtolower(explode('@', $email)[1] ?? '');
-    return in_array($domain, $GLOBALS['domains'], true);
-}
-```
-
-## Data
-
-- **File:** `domains.json`
-- **Format:** JSON array of lowercase domain strings, sorted alphabetically
-- **Count:** ~4,778 domains
-
-## Contributing
-
-To add or remove domains, edit `domains.json` and submit a pull request. Keep the list sorted alphabetically.
 
 ## Related
 
-- [free-email-domains](https://github.com/Kikobeats/free-email-domains) - The original list by Kiko Beats (npm package).
+- [free-email-domains](https://github.com/Kikobeats/free-email-domains) - The original list by Kiko Beats.
 - [email-providers](https://github.com/Kikobeats/email-providers) - Top 3k common emails by Alexa rank.
 
 ## License
 
-MIT - See [LICENSE](LICENSE) for details.
+**free-email-domains** © [SRWorks LLC](https://srworks.co), released under the MIT License.
 
-Originally created by [Kiko Beats](https://kikobeats.com), released under the MIT License.
+Maintained by [SRWorks LLC](https://srworks.co) with help from contributors.
+
+[srworks.co](https://srworks.co) · GitHub [@srworksllc](https://github.com/srworksllc)
